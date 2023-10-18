@@ -15,7 +15,7 @@ int separator(char **tokens, char *line, int ind, char **argv)
 
 		if (*split_cmd)
 		{
-			status = exec(tokens, semicolon, ind, argv);
+			status = exec(tokens, split_cmd, ind, argv);
 		}
 
 		semicolon = strtok(NULL, del);
