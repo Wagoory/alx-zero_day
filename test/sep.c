@@ -1,9 +1,9 @@
 #include "main.h"
 
-int separator(char *new_line, char **tokens, char *line, int ind, char **argv)
+int separator(char **tokens, char *line, int ind, char **argv)
 {
 	char *del = " ; ";
-	char *semicolon = strtok(new_line, del);
+	char *semicolon = strtok(line, del);
 	char *split_cmd;
 	int status = 0;
 
@@ -13,8 +13,9 @@ int separator(char *new_line, char **tokens, char *line, int ind, char **argv)
 		while (*split_cmd && (*split_cmd == ' ' || *split_cmd == '\t'))
 			split_cmd++;
 
-		if (*split_cmd) {
-			status = exec(tokens, line, ind, argv);
+		if (*split_cmd)
+		{
+			status = exec(tokens, semicolon, ind, argv);
 		}
 
 		semicolon = strtok(NULL, del);

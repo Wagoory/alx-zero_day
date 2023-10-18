@@ -39,7 +39,7 @@ int main(int ac, char **argv)
                         handle_built(tokens, status, line, ind, argv);
                         continue;
                 }
-                status = separator(line, tokens, line, ind, argv);
+                status = separator(tokens, line, ind, argv);
                 free(tokens);
                 free(line);
         }

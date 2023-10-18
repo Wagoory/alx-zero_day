@@ -54,7 +54,8 @@ char *_strdup(char *str);
 
 int _strncmp(const char *str1, const char *str2, size_t num);
 
-int separator(char *new_line, char **tokens, char *line, int ind, char **argv);
+int separator(char **tokens, char *line, int ind, char **argv);
+
 /* helper  */
 
 int _isspace(char c);
