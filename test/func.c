@@ -413,11 +413,10 @@ char *read_line(void)
  * Return: the array of the splited command
  */
 
-char **spilt_line(char *new_line)
+char **spilt_line(char *new_line, char *del)
 {
 	int len = 0;
 	char **args = NULL;
-	char *del = " \n\t";
 	char *token = NULL;
 
 	args = malloc(sizeof(char *) * 25);
